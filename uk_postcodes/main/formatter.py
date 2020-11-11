@@ -1,7 +1,7 @@
 import re
 
-from main.exceptions import *
-from main.validator import *
+from uk_postcodes.main.exceptions import *
+from uk_postcodes.main.validator import *
 
 
 class Postcode:
@@ -31,8 +31,18 @@ class Postcode:
         string = self.outward_code + " " + self.inward_code
         return string
 
+    def __eq__(self, other):
+        if (self.area == other.area) and (self.district == other.district) and (self.sector == other.sector) and (self.unit == other.unit):
+            return True
+        return False
+
     @staticmethod
     def from_string(postcode: str):
+        """
+        Create a Postcode object from a string
+        :param postcode: A string with the postcode
+        :return: A postcode object
+        """
 
         match = re.search(
             "^(("
