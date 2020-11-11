@@ -8,7 +8,7 @@ Requirements :
 
 # How to install it ?
 
-On the root folder execute :
+In the root folder execute :
 
     python setup.py install
     
