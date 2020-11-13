@@ -3,10 +3,17 @@
 Requirements :
 
 <ul>
-    <li>Python 3.8.3</li>
+    <li>Python 3.6</li>
 </ul>
 
 # How to install it ?
+
+
+## Using PIP
+
+    pip install postcodes-uk
+
+## Manually
 
 In the root folder execute :
 
@@ -16,14 +23,14 @@ In the root folder execute :
 
 ## Validate a postcode
 
-    import uk_postcodes
-    uk_postcodes.validate("EC1A 1BB")
+    import postcodes_uk
+    postcodes_uk.validate("EC1A 1BB")
 
 This will return a boolean with the validation result.
 
 ## Format a postcode
 
-    from uk_postcodes import Postcode
+    from postcodes_uk import Postcode
     postcode = Postcode(area="EC", district="1A", sector=1, unit="BB")
     print(postcode)
     
@@ -31,7 +38,7 @@ This will return a boolean with the validation result.
  
  ## Create a Postcode object from a string
  
-    from uk_postcodes import Postcode
+    from postcodes_uk import Postcode
     postcode = Postcode.from_string("EC1A 1BB")
     print(postcode.area)
     
