@@ -1,7 +1,7 @@
 import pytest
 
-from uk_postcodes import Postcode
-from uk_postcodes.main.exceptions import *
+from postcodes_uk import Postcode
+from postcodes_uk.main.exceptions import *
 
 
 def test_postcode_from_string():

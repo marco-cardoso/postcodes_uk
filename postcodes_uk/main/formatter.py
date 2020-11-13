@@ -1,7 +1,7 @@
 import re
 
-from uk_postcodes.main.exceptions import *
-from uk_postcodes.main.validator import *
+from postcodes_uk.main.exceptions import *
+from postcodes_uk.main.validator import *
 
 
 class Postcode:

@@ -9,13 +9,13 @@ from setuptools import find_packages, setup
 
 
 # Package meta-data.
-NAME = 'uk_postcodes'
+NAME = 'postcodes_uk'
 DESCRIPTION = 'Validate and format UK postcodes.'
 URL = 'https://github.com/marco-cardoso/uk_postcodes'
 EMAIL = 'marco.carddoso.2020@gmail.com'
 AUTHOR = 'Marco Cardoso'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 
 # Packages that are required for this module to be executed
@@ -40,7 +40,7 @@ try:
 except FileNotFoundError:
     long_description = DESCRIPTION
 
-source_root = Path("uk_postcodes")
+source_root = Path("postcodes_uk")
 with (source_root  / "version.py").open(
     "w", encoding="utf-8"
 ) as f:
@@ -65,7 +65,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(exclude=('tests',)),
-    package_data={'uk_postcodes': ['VERSION']},
+    package_data={'postcodes_uk': ['VERSION']},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,

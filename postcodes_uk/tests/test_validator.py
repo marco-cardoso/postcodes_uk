@@ -1,4 +1,4 @@
-from uk_postcodes.main.validator import *
+from postcodes_uk.main.validator import *
 
 
 def test_validate_postcode():
