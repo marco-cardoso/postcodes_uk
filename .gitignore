@@ -73,5 +73,6 @@ MANIFEST
 
 # Per-project virtualenvs
 .venv*/
+env
 /local_files/
 local_files/
