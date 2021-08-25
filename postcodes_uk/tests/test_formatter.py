@@ -7,6 +7,12 @@ from postcodes_uk.main.exceptions import *
 def test_postcode_from_string():
     assert Postcode(area="EC", district="1A", sector=1, unit="BB") == Postcode.from_string("EC1A 1BB")
     assert Postcode(area="EC", district="1A", sector=1, unit="BB") != Postcode.from_string("EC1B 1BB")
+    assert Postcode(area="EC", district="1A", sector=1, unit="BB") != Postcode.from_string("EC1B  1BB")
+    assert Postcode(area="EC", district="1A", sector=1, unit="BB") != Postcode.from_string(" EC1B 1BB")
+    assert Postcode(area="EC", district="1A", sector=1, unit="BB") != Postcode.from_string("EC1B 1BB ")
+
+    with pytest.raises(InvalidPostcode):
+        Postcode.from_string("1234ABCD")
 
 
 def test_postcode_init():

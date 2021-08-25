@@ -16,3 +16,8 @@ class InvalidSector(Exception):
 class InvalidUnit(Exception):
     def __init__(self, msg='Invalid postcode unit', *args, **kwargs):
         super().__init__(msg, *args, **kwargs)
+
+
+class InvalidPostcode(Exception):
+    def __init__(self, msg='Invalid postcode', *args, **kwargs):
+        super().__init__(msg, *args, **kwargs)
