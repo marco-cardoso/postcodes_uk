@@ -55,10 +55,13 @@ class Postcode:
             postcode
         )
 
-        area = match.group("area")
-        district = match.group("district")
-        sector = int(match.group("sector"))
-        unit = match.group("unit")
+        try:
+            area = match.group("area")
+            district = match.group("district")
+            sector = int(match.group("sector"))
+            unit = match.group("unit")
+        except:
+            raise InvalidPostcode
 
         return Postcode(area, district, sector, unit)
 
